@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #D23754;
+}
+.container{
+    background-color: white;
+    border: 3px solid black;
+    box-shadow: 0px 5px 15px 6px #000000;
+    border-radius: 20px;
+    padding: 2vw;
+    width: 78vw;
+    margin: 15vh auto;
+}
+img{
+    width: 8vw;
+    margin: auto;
+}
+.player>img{
+    cursor: pointer;
+}
+.gameboard{
+    display: flex;
+}
+.player,
+.computer{
+    width: 35vw;
+    text-align: center;
+    margin: 2vw;
+    box-shadow: 3px 3px 3px lightgray, -3px -3px 3px lightgray;
+    border-radius: 20px;
+    padding: 1.5em;
+}
+#scores{
+    display: flex;
+    justify-content: center;
+    width: 25vw;
+    margin: 4vh auto;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 1vw;
+}
+#playerScore,
+#computerScore{
+    margin-left: 1vw;
+}
+#playerScore{
+    margin-right: 3vw;
+}
+.winnerHidden{
+    display: none;
+}
+#youWin a,
+#computerWins a,
+#tie a{
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 20px;
+    font-size: 0.8em;
+    width: 8vw;
+    margin-top: 3vh;
+    align-self: center;
+    padding: 0.8em;
+}
+.winner{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px black;
+    background-color: #D23754;
+    width: 73vw;
+    height: 45vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: absolute;
+    top: 23vh;
+    left: auto;
+    padding: 2em;
+}
+@media  screen and (max-width:960px){
+    .gameboard{
+        flex-direction: column;
+    }
+    .container{
+        width: 85vw;
+        margin: 4vh auto;
+    }
+    .player,
+    .computer{
+        width: 70vw;
+        margin: 2vw auto;
+    }
+    .pics,
+    .random{
+        width: 15vw;
+    }
+    .player,
+    .computer{
+        margin-top: 3vh;
+    }
+    #scores{
+        width: 70vw;
+        margin: 4vh auto;
+    }
+    .winner{
+        top: 6vh;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 66vh;
+        padding-top: 20vh;
+    }
+    #youWin a,
+    #computerWins a,
+    #tie a{
+        font-size: 0.8em;
+        width: 30vw;
+    }
+}
